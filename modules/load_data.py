@@ -58,6 +58,7 @@ def save_gesture(name, size=200):
 
                 points.append(name)
                 save_csv(points)
+                frames_saved += 1
 
             # Flip the image horizontally for a selfie-view display.
             cv2.imshow('Wait until this window get close', cv2.flip(image, 1))
@@ -67,5 +68,4 @@ def save_gesture(name, size=200):
             # Count data
             if size == frames_saved:
                 break
-            frames_saved += 1
         cap.release()
