@@ -1,17 +1,14 @@
+from modules.input import *
 from modules.load_data import *
+from modules.training import *
 
 import sys
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
     if len(sys.argv) == 1:
-        pass
+        model, labels = train_model()
+        get_gesture(model, labels)
     elif sys.argv[1] == 'save_gesture':
         save_gesture(sys.argv[2])
+    elif sys.argv[1] == 'training':
+        train_model()
