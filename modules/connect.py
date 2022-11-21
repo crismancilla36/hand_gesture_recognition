@@ -3,9 +3,7 @@ import bluetooth
 def scan():
     print("Scanning for bluetooth devices:")
     devices = bluetooth.discover_devices(lookup_names = True, lookup_class = True)
-    print(devices)
     number_of_devices = len(devices)
-    print(f"{number_of_devices} devices found")
 
     for addr, name, device_class in devices:
         print(f"Device:")
@@ -15,15 +13,11 @@ def scan():
     return
     
 def send_data(value: int):
-    addr = "8C:E5:C0:00:E3:DA" # ADDRESS
+    addr = "" # ADDRESS
     port = 1 # PORT Number
-
+    
     sock = bluetooth.BluetoothSocket()
     sock.connect((addr, port))
-    sock.send(value)
+    sock.send(bytes([value]))
     print("Connect")
     sock.close()
-
-if __name__ == '__main__':
-    scan()
-    send_data(5)
