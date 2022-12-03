@@ -12,7 +12,9 @@ Así mismo será necesario contar con un [entorno virtual](https://docs.python.o
 
 Una vez que se ha clonado el repositorio será necesario instalar todos los paquetes que se encuentran en `requirements.txt`.
 
-`pip install -r requirements.txt`
+```
+pip install -r requirements.txt
+```
 
 ## Ejecución
 
@@ -22,16 +24,30 @@ parámetros a nuestra conveniencia.
 
 ###Sintaxis
 
-```python main.py <function> <argument>```
+```
+python main.py <function> <argument>
+```
 
 ###Ejemplo
 
 El comando de ejemplo captura un conjunto de puntos tomados por la webcam y los etiqueta como `palm`. Finalmente 
 los agrega al archivo `resources/data.csv`
 
-```python main.py save_gesture palm```
+```
+python main.py save_gesture palm
+```
 
 ## Funciones disponibles
 
 ### save_gesture < name >
 Agrega un conjuto de puntos en el dataset con la etiqueta `name`.
+
+````commandline
+python main.py save_gesture peace
+````
+
+
+## Implementaciones
+
+Si usted necesita hacer uso de del modelo para otras implementaciones solo necesita editar el archivo `main.py`.
+Ahí podrá llamar al iterador ``get_gesture`` el cual genera una tuplas ``(gesture_index, gesture_label)``.
