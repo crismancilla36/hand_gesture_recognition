@@ -50,8 +50,9 @@ def get_gesture(model, labels):
                 p = np.array([points])
 
                 p = p.reshape(1, -1)
-                cosa = model.predict(p)
-                print(labels[cosa])
+                result = model.predict(p)
+
+                yield result, labels[result]
 
             # Flip the image horizontally for a selfie-view display.
             cv2.imshow('Reading gesture...', cv2.flip(image, 1))
