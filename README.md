@@ -1,6 +1,6 @@
 # Reconocimiento de gestos de mano
 
-> **Nota:** Por ahora está en español, pero por cuestiones de presentación será actualizado a inglés en un futuro.
+> **Nota:** Por ahora está en español, en un futuro podría cambiar a inglés.
 
 ## Preparación de entorno
 
