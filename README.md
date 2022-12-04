@@ -5,8 +5,13 @@
 ## Preparación de entorno
 
 ### Requisitos
+
 Para la ejecución de este proyecto será necesario contar con [Python3](https://www.python.org/).
 Así mismo será necesario contar con un [entorno virtual](https://docs.python.org/3/library/venv.html).
+
+
+> **Nota:** Por el momento, antes de crear el dataset es necesario crear la carpeta `resources`.
+
 
 ### Clonar el repositorio
 
